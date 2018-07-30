@@ -1,0 +1,85 @@
+body {
+  background-color: #150505;
+}
+
+.headline,
+#name,
+#temp,
+#weather,
+#icon,
+#mb {
+  margin-top: 5%;
+  font-family: Palatino Linotype;
+
+  font-weight: 1000;
+  font-size: 2.5em;
+  color: white;
+  -webkit-text-stroke: 0.5px orange;
+}
+
+#name,
+#temp,
+#weather,
+#icon,
+#mb {
+  font-size: 2em;
+  margin-top: 1%;
+  -webkit-text-stroke: 0.5px white;
+  outline: none;
+}
+
+#icon {
+  margin-top: 0%;
+  animation: spin 12s infinite linear;
+  width: 15%;
+}
+
+@-moz-keyframes spin {
+  100% {
+    -moz-transform: rotate(360deg);
+  }
+}
+@-webkit-keyframes spin {
+  100% {
+    -webkit-transform: rotate(360deg);
+  }
+}
+@keyframes spin {
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+
+.headline {
+  margin-top: 3%;
+  font-size: 5em;
+}
+
+#name {
+  margin-top: 3%;
+}
+
+#mb {
+  font-size: 1em;
+}
+
+.glyphicon.glyphicon-map-marker {
+  color: #6666ff;
+  transform: scaleY(1.2);
+  position: relative;
+  top: -150px;
+}
+
+#gimg {
+  border: 2px solid silver;
+  border-radius: 5px;
+}
+
+h6 {
+  color: silver;
+}
+
+#temp {
+  cursor: pointer;
+}
