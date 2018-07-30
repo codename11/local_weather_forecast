@@ -56,7 +56,7 @@ $(document).ready(function() {
     $.getJSON(xt, function(json) {
       //$("#message").html(JSON.stringify(json));
       tnt = JSON.stringify(json);
-	  
+	  alert(tnt);
       $("#name").prepend(json.name + ", " + json.sys.country);
 
       if (br === 0) {
