@@ -26,11 +26,11 @@ $(document).ready(function() {
       "lat=" + position.coords.latitude + "&lon=" + position.coords.longitude;
 
     var latlon = position.coords.latitude + "," + position.coords.longitude;
-
+	const kljuc = "AIzaSyBNhe45otXCcDn2ZV1dqla-IyYTyLm1HDU".split("");
     var img_url =
       "https://maps.googleapis.com/maps/api/staticmap?center=" +
       latlon +
-      "&zoom=14&size=400x300&key=AIzaSyBNhe45otXCcDn2ZV1dqla-IyYTyLm1HDU";
+      "&zoom=14&size=400x300&key="+kljuc.join("");
 
     document.getElementById("gmap").innerHTML = "<img src='" + img_url + "'>";
 	
