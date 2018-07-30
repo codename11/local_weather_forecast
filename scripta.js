@@ -33,25 +33,6 @@ $(document).ready(function() {
       "&zoom=14&size=400x300&key=AIzaSyBNhe45otXCcDn2ZV1dqla-IyYTyLm1HDU";
 
     document.getElementById("gmap").innerHTML = "<img src='" + img_url + "'>";
-
-	switch (error.code) {
-      case error.PERMISSION_DENIED:
-        xr.innerHTML = "User denied the request for Geolocation.";
-        $("#mark").hide();
-        break;
-      case error.POSITION_UNAVAILABLE:
-        xr.innerHTML = "Location information is unavailable.";
-        $("#mark").hide();
-        break;
-      case error.TIMEOUT:
-        xr.innerHTML = "The request to get user location timed out.";
-        $("#mark").hide();
-        break;
-      case error.UNKNOWN_ERROR:
-        xr.innerHTML = "An unknown error occurred.";
-        $("#mark").hide();
-        break;
-    }
 	
     $.getJSON(xt, function(json) {
       //$("#message").html(JSON.stringify(json));
