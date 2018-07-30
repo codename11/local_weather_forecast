@@ -4,9 +4,7 @@ var error = "";
 var tnt = "";
 var br = 0;
 $(document).ready(function() {
-  function geo_error() {
-    alert("Sorry, no position available.");
-  }
+
   
   var geo_options = {
     enableHighAccuracy: true,
