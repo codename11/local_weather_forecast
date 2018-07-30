@@ -7,7 +7,7 @@ $(document).ready(function() {
   function geo_error() {
     alert("Sorry, no position available.");
   }
-
+  
   var geo_options = {
     enableHighAccuracy: true,
     maximumAge: 30000,
@@ -21,10 +21,12 @@ $(document).ready(function() {
   }
 
   function showPosition(position) {
+	  
     xt +=
       "lat=" + position.coords.latitude + "&lon=" + position.coords.longitude;
 
     var latlon = position.coords.latitude + "," + position.coords.longitude;
+
     var img_url =
       "https://maps.googleapis.com/maps/api/staticmap?center=" +
       latlon +
@@ -32,7 +34,7 @@ $(document).ready(function() {
 
     document.getElementById("gmap").innerHTML = "<img src='" + img_url + "'>";
 
-    switch (error.code) {
+    /*switch (error.code) {
       case error.PERMISSION_DENIED:
         xr.innerHTML = "User denied the request for Geolocation.";
         $("#mark").hide();
@@ -49,11 +51,12 @@ $(document).ready(function() {
         xr.innerHTML = "An unknown error occurred.";
         $("#mark").hide();
         break;
-    }
+    }*/
 
     $.getJSON(xt, function(json) {
       //$("#message").html(JSON.stringify(json));
       tnt = JSON.stringify(json);
+	  
       $("#name").prepend(json.name + ", " + json.sys.country);
 
       if (br === 0) {
